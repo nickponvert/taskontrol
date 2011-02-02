@@ -1,1 +1,133 @@
-TASKontrol webpage
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>TASKontrol</title>
+	<style type="text/css">
+	  body
+	  {
+	  margin: 0;
+	  padding: 0;
+	  font: 100%/1.4 helvetica, arial, sans-serif;
+	  color: #444;
+	  background: #fff;
+	  }
+
+	  div.main
+	  {
+	  width: 80%;
+	  padding-top: 20px ;
+	  padding-bottom: 20px ;
+	  margin-left: auto ;
+	  margin-right: auto ;
+	  }
+
+	  div.author
+	  {
+	  text-align:left;
+	  color: #888;
+	  }
+
+	  img.screenshot
+	  {
+	  padding-bottom: 20px ;
+	  padding-left: 20px ;
+	  margin-left: auto ;
+	  margin-right: auto ;
+	  }
+
+	  h1, h2, h3, h4, h5, h6
+	  {
+	  margin: 0 0 .6em;
+	  line-height: 1.1;
+	  }
+
+	  h2, h3 { color: #003d5d; }
+	  h2 { font-size: 218.75%; }
+	  h3 { font-size: 137.5%; }
+	  #content h3 { clear: left; }
+
+	  h4
+	  {
+	  font-size: 118.75%;
+	  margin: 1em 0 .6em;
+	  }
+
+	  h5 { font-size: 112.5%; }
+	  p { margin: 0 0 1em; }
+	  img { border: none; }
+	  a:link { color: #035389; }
+	  a:visited { color: #027c87; }
+	  a:focus { color: #000; }
+	  a:hover { color: #649805; }
+	  a:active { color: #b00; }
+
+	  code
+	  {
+	  background: #ecf7fd;
+	  font: 115% courier, monaco, monospace;
+	  margin: 0 .3em;
+	  }
+
+	</style>
+</head>
+
+<body>
+<div class="main">
+<h1>TASKontrol</h1>
+
+<p>
+TASKontrol is a system for controlling behavioral experiments. The source code is available at 
+<a href="https://github.com/sjara/taskontrol">https://github.com/sjara/taskontrol</a>.
+</p>
+
+<p>
+It uses the state machine and sound server running on Linux+RTAI,
+originally developed for Cold Spring Harbor Laboratory, available
+at <a href="http://code.google.com/p/rt-fsm/">http://code.google.com/p/rt-fsm/</a>.
+</p>
+
+<p>
+TASKontrol consists of a client and a set of modules written in Python
+and PyQt4 designed to ease the process of writing behavioral
+protocols. Here is the screenshot of a TASKontrol protocol running on Ubuntu:
+</p>
+<div>
+<img class="screenshot" src="./taskontrol_screenshot_20110202.png"/>
+</div>
+
+<p>
+The system serves as an alternative to BControl, and enables controlling
+behavioral experiments without the need of Matlab.  Most of TASKontrol
+is based on designs and ideas implemented in BControl. More
+information about BControl, including nice introductions to the state
+machine and the trial structure, can be found at
+<a href="http://brodylab.princeton.edu/bcontrol">http://brodylab.princeton.edu/bcontrol</a>.
+</p>
+
+<p>
+TASKontrol can run on the same computer as the state machine server,
+avoiding the need of an additional "governing" machine (usually
+running Windows). In summary, compared to the standard system as of
+2009, TASKontrol has the following advantages:
+<ul>
+<li>No need for a Windows license.</li>
+<li>No need for a Matlab license.</li>
+<li>No need for a second computer.</li>
+</ul>
+And all this with the power of Python and the beauty of Qt4.
+</p>
+
+<hr style="margin-top:20px"/>
+<div class="author">
+Santiago Jaramillo<br/>
+Cold Spring Harbor Laboratory
+</div>
+
+
+</div>
+
+</body>
+</html>
+
