@@ -78,45 +78,37 @@
 <h1>TASKontrol</h1>
 
 <p>
-TASKontrol is a system for controlling behavioral experiments. The source code is available at 
+TASKontrol is a system for controlling behavioral experiments. It consists of modules written in Python and PySide (Qt4 for Python) designed to ease the process of writing behavioral paradigms. 
+</p>
+
+<p>
+The source code is available at 
 <a href="https://github.com/sjara/taskontrol">https://github.com/sjara/taskontrol</a>.
 </p>
 
 <p>
-It uses the state machine and sound server running on Linux+RTAI,
-originally developed for Cold Spring Harbor Laboratory, available
-at <a href="http://code.google.com/p/rt-fsm/">http://code.google.com/p/rt-fsm/</a>.
+TASKontrol does not control hardware directly. Instead, it provides a
+client to communicate with a finite state machine running on hardware
+connected to external signals. The default implementation of the
+state machine server runs on the Arduino platform.
 </p>
 
-<p>
-TASKontrol consists of a client and a set of modules written in Python
-and PyQt4 designed to ease the process of writing behavioral
-protocols. Here is the screenshot of a TASKontrol protocol running on Ubuntu:
-</p>
 <div>
 <img class="screenshot" src="./taskontrol_screenshot_20110202.png"/>
 </div>
 
 <p>
-The system serves as an alternative to BControl, and enables controlling
-behavioral experiments without the need of Matlab.  Most of TASKontrol
-is based on designs and ideas implemented in BControl. More
-information about BControl, including nice introductions to the state
-machine and the trial structure, can be found at
-<a href="http://brodylab.princeton.edu/bcontrol">http://brodylab.princeton.edu/bcontrol</a>.
+The design of TASKontrol was largely inspired by <a href="http://brodylab.princeton.edu/bcontrol" target="_blank">BControl</a> and the <a href="http://code.google.com/p/rt-fsm/" target="_blank">state machine for Linux+RTAI</a>, originally developed at Cold Spring Harbor Laboratory.
 </p>
 
 <p>
-TASKontrol can run on the same computer as the state machine server,
-avoiding the need of an additional "governing" machine (usually
-running Windows). In summary, compared to the standard system as of
-2009, TASKontrol has the following advantages:
+TASKontrol provides the following advantages:
 <ul>
-<li>No need for a Windows license.</li>
-<li>No need for a Matlab license.</li>
-<li>No need for a second computer.</li>
+<li>No need for a Windows license, it runs easily on Linux.
+<li>No need for a Matlab license, it is written in Python.
+<li>No need for two computers, when used with the Arduino server.
+<li>An appealing graphical interface, it uses Qt.
 </ul>
-And all this with the power of Python and the beauty of Qt4.
 </p>
 
 <hr style="margin-top:20px"/>
